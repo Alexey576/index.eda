@@ -1,79 +1,281 @@
  * {
-box-sizing: border-box;
+box-sizing: border-box;/* делает верстку макетов сайта более понятным */
 }
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;/*  */
 }
 .container {
-    max-width: 1194px;
-    margin: auto;
+    max-width: 1194px;/*  */
+    margin: auto;/*  */
 }
 .header {
-    display: flex;
-    align-items: center;
+    display: flex;/*  */
+    align-items: center;/*  */
 }
 .search-form {
-margin-left: 76px;
-background: rgba(238, 238, 238, 0.71);
-border-radius: 10px;
-display: flex;
-max-width: 620px;
-flex-grow: 1;
-position: relative;
+margin-left: 76px;/*  */
+background: rgba(238, 238, 238, 0.71);/*  */
+border-radius: 10px;/*  */
+display: flex;/*  */
+max-width: 620px;/*  */
+flex-grow: 1;/*  */
+position: relative;/*  */
 }
 .search-input {
-background-color: transparent;
-border: none;
-width: 100%;
-padding-left: 20px;
-padding-right: 20px;
-padding-top: 13px;
-padding-bottom: 13px;
+background-color: transparent;/*  */
+border: none;/*  */
+width: 100%;/*  */
+padding-left: 20px;/*  */
+padding-right: 20px;/*  */
+padding-top: 13px;/*  */
+padding-bottom: 13px;/*  */
 }
 .search-buttom {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    padding-left: 18px;
-    cursor: pointer;
+    background-color: transparent;/*  */
+    border: none;/*  */
+    position: absolute;/*  */
+    right: 0;/*  */
+    top: 0;/*  */
+    height: 100%;/*  */
+    padding-left: 18px;/*  */
+    cursor: pointer;/*  */
 }
 .auth {
-    margin-left: auto;
+    margin-left: auto;/*  */
 }
 .login {
-    background: #EBEBEB;
-border-radius: 50px;
-padding: 16px 30px;
-display: block;
-text-decoration: none;
-font-size: 14px;
-line-height: 16px;
-color: #000000;
+    background: #EBEBEB;/*  */
+border-radius: 50px;/*  */
+padding: 16px 30px;/*  */
+display: block;/*  */
+text-decoration: none;/*  */
+font-size: 14px;/*  */
+line-height: 16px;/*  */
+color: #000000;/*  */
 }
-.shopping-cart {
-    position: relative;
-    text-decoration: none;
-    width: 49px;
-    height: 49px;
-    border-radius: 50%;
-    background: #F66A15;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 30px;
+.shopping-cart {/*  */
+    position: relative;/*  */
+    text-decoration: none;/*  */
+    width: 49px;/*  */
+    height: 49px;/*  */
+    border-radius: 50%;/*  */
+    background: #F66A15;/*  */
+    display: flex;/*  */
+    align-items: center;/*  */
+    justify-content: center;/*  */
+    margin-left: 30px;/*  */
 }
 .shopping-counter{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background: #FFAF19;
-    font-size: 8px;
-line-height: 9px;
-color: #000000;
-display: block;
-padding: 5px;
-border-radius: 50%;
+    position: absolute;/*  */
+    right: 0;/*  */
+    bottom: 0;/*  */
+    background: #FFAF19;/*  */
+    font-size: 8px;/*  */
+line-height: 9px;/*  */
+color: #000000;/*  */
+display: block;/*  */
+padding: 5px;/*  */
+border-radius: 50%;/*  */
+} 
+.slide {
+    position: relative;/* для главного */
+    overflow: hidden;/* чтобы все что выходит за границы прятало  */
+    border-radius: 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 100px;
 }
+.slide-text-light {
+    background-color: grey;
+    color: white;
+}
+.slide-content {
+    max-width: 400px;
+    position: relative;/*  чтобы вытащить текст из под картинки */
+}
+.slide-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+font-weight: bold;
+font-size: 50px;
+line-height: 51px;
+}
+.slide-text {
+font-weight: bold;
+font-size: 16px;
+line-height: 23px;
+margin-bottom: 30px;
+}
+.button-primary {
+    background: #F47322;
+    color: #fff;
+}
+.button-default {
+    background-color: #fff;
+    color: #5F5F61;
+}
+.button {
+    border-radius: 25px;
+    display: inline-block;/* чтобы кнопка не вылазила за пределы */
+    text-decoration: none;/* отключает подчеркивание текста  */
+    padding: 12px 50px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+}
+.slide-summer {
+ background-image: url("/images/summer.png"); /* Устанавливается фоновая картинка  */
+ background-repeat: no-repeat; /*Чтобы не повторялась по вертикале и горизонтале */
+ background-size: cover; /*Растягивает изображение по ширене и высоте  */
+}
+.slide:before {/* псевдо элемент */
+    content: "";
+    position: absolute; /*  для дочерней*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%);
+}
+.promo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;/*  */
+    align-items: center;/*  */
+    min-width: 1194px;
+    margin: auto;
+    padding-right: 0;
+ 
+}
+.card {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 32px;
+    min-width: 570px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;/*  выстраевание в колонку текст*/
+    justify-content: space-between; /*  Разделит header footer*/
+
+}
+.card:before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+.card-text-light {
+    color: #fff;
+
+}
+.card-title {
+    font-weight: 500;
+font-size: 24px;
+line-height: 23px;
+margin-bottom: 21px;
+}
+.card-description {
+    font-weight: 500;
+font-size: 16px;
+line-height: 23px;
+}
+.card-price  {
+    display: block;/* ЧТОБЫ ЗАНИМАЛ ВСЮ СТРОЧКУ */
+    font-weight: 500;
+font-size: 24px;
+line-height: 23px;
+margin-bottom: 8px;
+}
+.card-delivery {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 25px;
+}
+.card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /*  утаскивает картинку на самый последний план*/
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+.cards {
+    margin-right: 0;
+    margin-left: 54px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 32px;
+    min-width: 570px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;/*  выстраевание в колонку текст*/
+    justify-content: space-between; /*  Разделит header footer*/
+
+}
+.cards:before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+.cards-text-light {
+    color: #fff;
+
+}
+.cards-title {
+    font-weight: 500;
+font-size: 24px;
+line-height: 23px;
+margin-bottom: 21px;
+}
+.cards-description {
+    font-weight: 500;
+font-size: 16px;
+line-height: 23px;
+}
+.cards-price  {
+    display: block;/* ЧТОБЫ ЗАНИМАЛ ВСЮ СТРОЧКУ */
+    font-weight: 500;
+font-size: 24px;
+line-height: 23px;
+margin-bottom: 8px;
+}
+.cards-delivery {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 25px;
+}
+.cards-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /*  утаскивает картинку на самый последний план*/
+    object-fit: cover;
