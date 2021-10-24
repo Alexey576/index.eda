@@ -212,12 +212,6 @@ margin-bottom: 8px;
     object-fit: cover;
 }
 
-
-
-
-
-
-
 .cards {
     margin-right: 0;
     margin-left: 54px;
@@ -279,3 +273,4 @@ margin-bottom: 8px;
     height: 100%;
     z-index: -2; /*  утаскивает картинку на самый последний план*/
     object-fit: cover;
+}
