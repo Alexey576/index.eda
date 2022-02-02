@@ -94,6 +94,22 @@ border-radius: 50%;/*  */
     max-width: 400px;
     position: relative;/*  чтобы вытащить текст из под картинки */
 }
+.slider-buttons {
+    position: absolute;
+    right: 46px;
+    bottom: 40px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between; /*  чтобы разлепить кнопки */
+}
+.slider-button {
+    cursor: pointer;
+}
+.swiper {
+    position: relative;
+}
 .slide-title {
     margin-top: 0;
     margin-bottom: 15px;
@@ -130,6 +146,16 @@ margin-bottom: 30px;
  background-repeat: no-repeat; /*Чтобы не повторялась по вертикале и горизонтале */
  background-size: cover; /*Растягивает изображение по ширене и высоте  */
 }
+.slide-autumn {
+    background-image: url("/images/oseni.png"); /* Устанавливается фоновая картинка  */
+ background-repeat: no-repeat; /*Чтобы не повторялась по вертикале и горизонтале */
+ background-size: cover;
+}
+.slide-vitamin {
+    background-image: url("/images/vitamin.png"); /* Устанавливается фоновая картинка  */
+    background-repeat: no-repeat; /*Чтобы не повторялась по вертикале и горизонтале */
+    background-size: cover;  
+}
 .slide:before {/* псевдо элемент */
     content: "";
     position: absolute; /*  для дочерней*/
@@ -144,24 +170,22 @@ margin-bottom: 30px;
 .promo {
     padding-top: 50px;
     padding-bottom: 50px;
-    display: flex;/*  */
-    align-items: center;/*  */
-    min-width: 1194px;
-    margin: auto;
-    padding-right: 0;
- 
+    display: flex;
+    justify-content: space-between;
+    margin: -20px;
 }
 .card {
+    flex: 50%;
+    margin: 20px;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
     padding: 32px;
-    min-width: 570px;
+    max-width: 570px;
     min-height: 380px;
     display: flex;
     flex-direction: column;/*  выстраевание в колонку текст*/
     justify-content: space-between; /*  Разделит header footer*/
-
 }
 .card:before{
     content: "";
@@ -211,21 +235,6 @@ margin-bottom: 8px;
     z-index: -2; /*  утаскивает картинку на самый последний план*/
     object-fit: cover;
 }
-
-.cards {
-    margin-right: 0;
-    margin-left: 54px;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-    padding: 32px;
-    min-width: 570px;
-    min-height: 380px;
-    display: flex;
-    flex-direction: column;/*  выстраевание в колонку текст*/
-    justify-content: space-between; /*  Разделит header footer*/
-
-}
 .cards:before{
     content: "";
     z-index: -1;
@@ -273,4 +282,400 @@ margin-bottom: 8px;
     height: 100%;
     z-index: -2; /*  утаскивает картинку на самый последний план*/
     object-fit: cover;
+}
+.section-title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 23px; 
+    margin-top: 0;
+    margin-bottom: 47px; 
+}
+.delivery-week {
+    padding: 100px 0;
+}
+.delivery-cards {
+    display: flex; /*  для того чтобы карты шли в строчку  */
+    flex-wrap: wrap; /*  перенос карты на другую строку */
+margin: -15px;
+}
+.delivery-card {
+    margin: 15px;
+    position: relative;
+    width: 275px;
+height: 182px;
+left: 0px;
+top: 0px;
+border-radius: 18px;
+overflow: hidden; /*  скрывает все что поподает за пределы карты */
+}
+.delivery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*  чтобы картинка аккуратно заполнялась*/
+}
+.delivery-tag {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #49494F;
+    padding: 5px 10px;
+}
+.tag-health {
+    background: #80ff01;
+}
+.delivery-tag-2 {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+font-size: 20px;
+line-height: 23px;
+padding: 5px 10px;
+color: #FFFFFF;
+
+}
+.delivery-tag-3 {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+font-size: 20px;
+line-height: 23px;
+padding: 5px 10px;
+color: #FFFFFF;
+
+}
+.delivery-tag-4 {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+font-size: 20px;
+line-height: 23px;
+padding: 5px 10px;
+color: #FFFFFF;
+}
+.delivery-tag-5 {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+font-size: 20px;
+line-height: 23px;
+padding: 5px 10px;
+color: #FFFFFF;
+
+}
+.delivery-tag-6 {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+font-size: 20px;
+line-height: 23px;
+padding: 5px 10px;
+color: #49494F;
+
+}
+.delivery-tag-7 {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+font-size: 20px;
+line-height: 23px;
+padding: 5px 10px;
+color: #49494F;
+}
+.delivery-tag-8{
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+font-size: 20px;
+line-height: 23px;
+padding: 5px 10px;
+color: #49494F;
+}
+.tag-health-2 {
+    background: #AEBC41;
+}
+.tag-health-3 {
+    background: #B86B78;
+}
+.tag-health-4 {
+    background: #D68334;
+}
+.tag-health-5 {
+    background: #CD6255;
+}
+.tag-health-6 {
+    background: #FFFDBF;
+}
+.tag-health-7 {
+    background: #F6FDC8;
+}
+.tag-health-8 {
+    background: #FEF7FE;
+}
+.section-grey {
+    background-color: #F6F6F6;
+}
+.category {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.tabs {
+    display: flex;
+    margin: 0;
+    margin-bottom: 62px;
+    padding: 0;
+    list-style-type: none; /*убрать точки списка */
+}
+.tabs-link {
+    font-size: 20px;
+line-height: 23px;
+text-decoration: none; /*убрать подчеркивание */
+color: #49494F;
+margin-right: 58px;
+}
+.tabs-link.active {
+    color: #F37321
+}
+.tabs-content-card {
+    display: flex;
+    flex-direction: row;
+align-items: flex-start;
+    margin: 0px;
+    padding-right: 37px;
+}
+.tabs-card {
+    max-width: 270px;
+    border-radius: 20px;
+    margin: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+}
+.tabs-image {
+    max-width: 100%;
+}
+.tabs-card-content {
+    padding: 23px;
+}
+.tabs-title {
+    margin-top: 0;
+    margin-bottom: 13px;
+    font-weight: 500;
+font-size: 20px;
+line-height: 23px;
+color: #000000;
+}
+.tabs-description {
+    font-weight: 500;
+font-size: 14px;
+line-height: 23px;
+color: #B9B9BE;
+}
+.tabs-info {
+    display:flex;
+    align-items:center;
+    justify-content: space-between; /*  чтобы раскидать по краям */
+}
+.tabs-price {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 23px;
+    color: #4B4B51;
+    display: block;  /*  для того чтобы строчка с весом ушла вниз*/
+    margin-bottom: 5px;
+}
+.tabs-weight {
+    font-weight: 500;
+font-size: 17px;
+line-height: 20px;
+color: #AAAAB1;
+}
+.button-outline {
+   background-color: transparent;
+   padding: 15px 25px;
+   border: 2px solid #F37321;
+box-sizing: border-box;
+border-radius: 33px; 
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: #F37321;
+cursor: pointer; /* появляется курсор при наведении*/
+}
+.button-center {
+    width: 315px;
+    display: block; /*  выравняет кнопку по центру*/
+    margin: auto;/*  выравняет кнопку по центру*/
+    margin-top: 60px;
+}
+.dignity-white {
+    background: #fff;
+}
+.dignity {
+    padding-top: 25px;
+    padding-bottom: 52px;
+}
+.dignity-title {
+    padding-top: 25px;
+    padding-bottom: 52px;
+    font-weight: 500;
+font-size: 32px;
+line-height: 23px;
+color: #000000; 
+}
+.dignity-cards{
+    display: flex;
+    flex-direction: row;
+align-items: flex-start;
+margin: 0px;
+padding-right: 37px;
+}
+.dignity-card {
+    min-width: 270px;
+    min-height: 296px;
+    border-radius: 18px;
+    margin: 15px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #E9E9E9;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+}
+.image-dignity {
+    padding-top: 30px;
+    display: block; 
+    margin: auto;
+}
+.dignity-card-content{
+    padding: 25px; 
+}
+.dignity-card-title {
+    margin: 0;
+    padding: 0 13px;
+    font-weight: 500;
+font-size: 16px;
+line-height: 23px;
+text-align: center;
+color: #000000;
+}
+.dignity-info-card {
+    margin: 0;
+    padding-top: 13px;
+    font-size: 14px;
+line-height: 22px;
+text-align: center;
+color: #49494F;
+}
+.footer {
+    background: #F6F6F6;
+    margin-top: 201px;
+    padding: 40px 0;
+}
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+}
+.footer-logo {
+    margin-right: 50px;
+}
+.footer-link {
+    font-size: 16px;
+line-height: 23px;
+text-decoration-line: underline;
+color: #000000;
+margin-right: 50px;
+}
+.social-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.social-link {
+    margin-left: 20px;
+    text-decoration: none;
+}
+@media (max-width: 1260px) {
+    .container {
+        max-width: 960px;
+    }
+    .search-form {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .card {
+        flex: 50%;  
+    }
+    .tabs-content-card {
+        flex-wrap: wrap;
+    }
+    .dignity-cards{
+        flex-wrap: wrap;
+    }
+    .tabs-card {
+        flex: 50%;
+        max-width: calc(50% - 30px);
+    }
+    .dignity-card {
+        flex: 50%;
+        max-width: calc(50% - 30px);
+    }
+}
+@media (max-width: 992px) {
+    .container {
+      max-width: 750px;  
+    }
+    .slide {
+        padding: 70px;
+    }
+   .delivery-card {
+       width: calc(50% - 30px);
+   } 
+   .footer-logo {
+       margin-right: 40px;
+   }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 560px;
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+    .search-form {
+        margin-left: 0;
+        margin-right: 0;  
+}
+}
+@media (max-width: 576px) {
+    .container {
+      max-width:  90%;
+    }
+    .search-form {
+        order: 5; /*  порядок поисковой строки будет последней в блоке*/
+        margin-top: 15px;
+        margin-bottom: 15px;
+}
+.promo {
+    flex-wrap: wrap;
+}
+.tabs-card {
+    max-width: 100%;
+}
 }
